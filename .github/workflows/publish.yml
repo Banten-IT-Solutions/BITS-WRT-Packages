@@ -44,7 +44,10 @@ jobs:
           echo "ref sec b64 decoded: $(sed -n '2p' /tmp/t.sec | base64 -d | wc -c)"
           echo "ref pub bytes: $(wc -c < /tmp/t.pub)"
           echo "ref pub b64 decoded: $(sed -n '2p' /tmp/t.pub | base64 -d | wc -c)"
-          head -c 60 /tmp/t.sec; echo
+          echo "--- ref sec hex (throwaway debug key) ---"
+          sed -n '2p' /tmp/t.sec | base64 -d | xxd -p | tr -d '\n'; echo
+          echo "--- ref pub hex (throwaway debug key) ---"
+          sed -n '2p' /tmp/t.pub | base64 -d | xxd -p | tr -d '\n'; echo
 
       - name: Sign Packages (usign/signify)
         run: |
