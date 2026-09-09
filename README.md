@@ -24,7 +24,7 @@
 
 | Feature              | Description                                                                                      |
 | -------------------- | ------------------------------------------------------------------------------------------------ |
-| **Always latest**    | Workflow harian + manual mengunduh `.ipk` terbaru dari kedua repo source.                        |
+| **Always latest**    | Workflow harian + manual mengunduh `.ipk` terbaru dari ketiga repo source.                       |
 | **Signed (usign)**   | `Packages` ditandatangani; opkg verifikasi via `option check_signature`.                         |
 | **SDK-less index**   | `mkindex.sh` baca `control.tar.gz` langsung — tak butuh OpenWrt SDK.                             |
 | **Landing page**     | Halaman web statis di GitHub Pages + file feed (.ipk, `Packages`).                              |
