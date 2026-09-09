@@ -1,0 +1,44 @@
+Package: bitsnetworksbot
+Version: 1.2.1
+Depends: libc, python3-light, python3-asyncio, python3-urllib, python3-logging, python3-pip, curl, ca-certificates, speedtest-go
+Section: utils
+Architecture: all
+Maintainer: Banten IT Solutions <support@bits.co.id>
+License: MIT
+Description: Telegram management bot for OpenWrt routers (BITS-WRT)
+  Monitor and manage your OpenWrt device via Telegram: status, internet
+  (Huawei HiLink), momo VPN, Tailscale, clients, schedule (Bandix), Docker,
+  firewall, storage, logs, backup, reboot and network tools.
+Filename: bitsnetworksbot_1.2.1_all.ipk
+Size: 23946
+SHA256sum: 3d339d1c2312444fec59295338da82dffacc83e202e1e3a840eb6a7f245b2ac3
+MD5Sum: 8bdbcded62f90e17ed90a3865723e675
+
+Package: luci-app-bitsnetworksbot
+Version: 1.2.1
+Depends: bitsnetworksbot, luci-base, rpcd, libc
+Section: luci
+Architecture: all
+Maintainer: Banten IT Solutions <support@bits.co.id>
+License: MIT
+Description: LuCI config page for BITS Networks Bot
+  Configure the Telegram management bot (token, allowed users, feature toggles)
+  from the LuCI web interface.
+Filename: luci-app-bitsnetworksbot_1.2.1_all.ipk
+Size: 2753
+SHA256sum: baef133ffdfc79575288212905233460149fee38c6f8ecec6f0955622ef0d685
+MD5Sum: fcf115fe7a2c86e4ff26d7735cd5ca6c
+
+Package: luci-app-tailscale
+Version: 1.0.6
+Depends: libc, luci-base, rpcd, tailscale
+Section: luci
+Architecture: all
+Maintainer: Banten IT Solutions <support@bits.co.id>
+License: MIT
+Description: LuCI support for Tailscale
+Filename: luci-app-tailscale_1.0.6_all.ipk
+Size: 10077
+SHA256sum: c5a51e7c9de6695a85210ca8edc9a75c2b40bc137ed0a0bd92c18fbccb0faa61
+MD5Sum: 46f03553099ab80599b5141eb3ab5745
+
