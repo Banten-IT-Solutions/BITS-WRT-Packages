@@ -39,7 +39,7 @@ jobs:
         run: |
           sudo apt-get update -qq
           sudo apt-get install -y -qq signify-openbsd
-          printf '%s' "$FEED_SIGN_KEY" > /tmp/feed.sec
+          printf '%s\n' "$FEED_SIGN_KEY" > /tmp/feed.sec
           chmod 600 /tmp/feed.sec
           signify-openbsd -S -s /tmp/feed.sec -m feed/Packages
           ls -la feed/Packages*
