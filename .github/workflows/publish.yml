@@ -1,0 +1,43 @@
+name: Publish opkg feed
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '23 3 * * *'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: opkg-feed-publish
+  cancel-in-progress: false
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Fetch latest BITS ipks
+        run: |
+          mkdir -p feed
+          gh release download --repo Banten-IT-Solutions/BITS-Networks-Bot \
+            --pattern '*.ipk' --dir feed --clobber
+          gh release download --repo Banten-IT-Solutions/BITS-Tailscale \
+            --pattern '*.ipk' --dir feed --clobber
+          ls -la feed/
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build Packages index
+        run: |
+          chmod +x mkindex.sh
+          ./mkindex.sh feed
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: ./feed
