@@ -35,6 +35,17 @@ jobs:
           chmod +x mkindex.sh
           ./mkindex.sh feed
 
+      - name: Sign Packages (usign/signify)
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq signify-openbsd
+          printf '%s' "$FEED_SIGN_KEY" > /tmp/feed.sec
+          chmod 600 /tmp/feed.sec
+          signify-openbsd -S -s /tmp/feed.sec -m feed/Packages
+          ls -la feed/Packages*
+        env:
+          FEED_SIGN_KEY: ${{ secrets.FEED_SIGN_KEY }}
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
