@@ -35,28 +35,13 @@ jobs:
           chmod +x mkindex.sh
           ./mkindex.sh feed
 
-      - name: Debug signify format (temporary)
+      - name: Sign Packages (usign/signify-compatible)
         run: |
           sudo apt-get update -qq
           sudo apt-get install -y -qq signify-openbsd
-          signify-openbsd -G -n -p /tmp/t.pub -s /tmp/t.sec
-          echo "ref sec bytes: $(wc -c < /tmp/t.sec)"
-          echo "ref sec b64 decoded: $(sed -n '2p' /tmp/t.sec | base64 -d | wc -c)"
-          echo "ref pub bytes: $(wc -c < /tmp/t.pub)"
-          echo "ref pub b64 decoded: $(sed -n '2p' /tmp/t.pub | base64 -d | wc -c)"
-          echo "--- ref sec hex (throwaway debug key) ---"
-          sed -n '2p' /tmp/t.sec | base64 -d | xxd -p | tr -d '\n'; echo
-          echo "--- ref pub hex (throwaway debug key) ---"
-          sed -n '2p' /tmp/t.pub | base64 -d | xxd -p | tr -d '\n'; echo
-
-      - name: Sign Packages (usign/signify)
-        run: |
-          echo "skip apt (done above)"
           BLOB=$(printf '%s' "$FEED_SIGN_BLOB" | tr -d ' \t\r\n')
           printf 'untrusted comment: BITS-WRT-Packages opkg feed signing key\n%s\n' "$BLOB" > /tmp/feed.sec
           chmod 600 /tmp/feed.sec
-          echo "key file bytes: $(wc -c < /tmp/feed.sec) (expect 156)"
-          echo "b64 decoded bytes: $(sed -n '2p' /tmp/feed.sec | base64 -d | wc -c) (expect 72)"
           signify-openbsd -S -s /tmp/feed.sec -m feed/Packages
           ls -la feed/Packages*
         env:
