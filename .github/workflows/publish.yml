@@ -39,8 +39,11 @@ jobs:
         run: |
           sudo apt-get update -qq
           sudo apt-get install -y -qq signify-openbsd
-          printf 'untrusted comment: BITS-WRT-Packages opkg feed signing key\n%s\n' "$FEED_SIGN_BLOB" > /tmp/feed.sec
+          BLOB=$(printf '%s' "$FEED_SIGN_BLOB" | tr -d ' \t\r\n')
+          printf 'untrusted comment: BITS-WRT-Packages opkg feed signing key\n%s\n' "$BLOB" > /tmp/feed.sec
           chmod 600 /tmp/feed.sec
+          echo "key file bytes: $(wc -c < /tmp/feed.sec) (expect 156)"
+          echo "b64 decoded bytes: $(sed -n '2p' /tmp/feed.sec | base64 -d | wc -c) (expect 72)"
           signify-openbsd -S -s /tmp/feed.sec -m feed/Packages
           ls -la feed/Packages*
         env:
