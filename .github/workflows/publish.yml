@@ -26,6 +26,8 @@ jobs:
             --pattern '*.ipk' --dir feed --clobber
           gh release download --repo Banten-IT-Solutions/BITS-Tailscale \
             --pattern '*.ipk' --dir feed --clobber
+          gh release download --repo Banten-IT-Solutions/BITS-Theme \
+            --pattern '*.ipk' --dir feed --clobber
           ls -la feed/
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
