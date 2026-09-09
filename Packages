@@ -42,3 +42,19 @@ Size: 10077
 SHA256sum: c5a51e7c9de6695a85210ca8edc9a75c2b40bc137ed0a0bd92c18fbccb0faa61
 MD5Sum: 46f03553099ab80599b5141eb3ab5745
 
+Package: luci-theme-bits
+Version: 1.0.0
+Depends: luci-base, rpcd, libc
+Section: luci
+Architecture: all
+Maintainer: Banten IT Solutions <support@bits.co.id>
+License: MIT
+Description: BITS theme for LuCI (OpenWrt)
+  Modern green theme for LuCI plus BITS branding: banner, SSH sysinfo,
+  boot service, and UI patches for momo, bandix, dockerman, diskman and
+  core LuCI pages.
+Filename: luci-theme-bits_1.0.0_all.ipk
+Size: 95741
+SHA256sum: 65f3c5f7cbe77290153fc13185ff1a18a788484a7d7e6377756a9b10dc6120d3
+MD5Sum: 27448972f05399e5ec402133603644d8
+
