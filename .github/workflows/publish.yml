@@ -2,8 +2,8 @@ name: Publish opkg feed
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '23 3 * * *'
+  repository_dispatch:
+    types: [release-update]
 
 permissions:
   contents: write
