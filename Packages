@@ -1,5 +1,5 @@
 Package: bitsnetworksbot
-Version: 1.2.2
+Version: 1.2.3
 Depends: libc, python3-light, python3-asyncio, python3-urllib, python3-logging, python3-pip, curl, ca-certificates, speedtest-go
 Section: utils
 Architecture: all
@@ -9,13 +9,13 @@ Description: Telegram management bot for OpenWrt routers (BITS-WRT)
   Monitor and manage your OpenWrt device via Telegram: status, internet
   (Huawei HiLink), momo VPN, Tailscale, clients, schedule (Bandix), Docker,
   firewall, storage, logs, backup, reboot and network tools.
-Filename: bitsnetworksbot_1.2.2_all.ipk
-Size: 23952
-SHA256sum: 933cdd6d0eb62d20ab064582091bef8e57b39c3102a49f119111554fef8fd8d1
-MD5Sum: 47f32b498e7278239e3a5c17edfbd589
+Filename: bitsnetworksbot_1.2.3_all.ipk
+Size: 23931
+SHA256sum: 583cb85a20621200660f9ca41460e47c6f9340a5a8eb9b5093931ee961e812ca
+MD5Sum: 3f4cf97fc2002ee6159863c575f76ff2
 
 Package: luci-app-bitsnetworksbot
-Version: 1.2.2
+Version: 1.2.3
 Depends: bitsnetworksbot, luci-base, rpcd, libc
 Section: luci
 Architecture: all
@@ -24,10 +24,10 @@ License: MIT
 Description: LuCI config page for BITS Networks Bot
   Configure the Telegram management bot (token, allowed users, feature toggles)
   from the LuCI web interface.
-Filename: luci-app-bitsnetworksbot_1.2.2_all.ipk
-Size: 2755
-SHA256sum: 652e17ef7407c1da5a2064466cafeb1100b32a3832e5b1d7fe7368d6c6e33ac0
-MD5Sum: 9ab0b9f696d4f532179e262af484c5f3
+Filename: luci-app-bitsnetworksbot_1.2.3_all.ipk
+Size: 2749
+SHA256sum: cfe25db4932e0d2a2ed45f06c575e2acfaaf09e433c7170e66d45e2ac0680865
+MD5Sum: e705761c6eb7e89ff0ed26d8ecd62d32
 
 Package: luci-app-tailscale
 Version: 1.0.6
