@@ -1,4 +1,4 @@
-name: Publish opkg feed
+name: Publish opkg + apk feed
 
 on:
   workflow_dispatch:
@@ -9,7 +9,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: opkg-feed-publish
+  group: bits-feed-publish
   cancel-in-progress: false
 
 jobs:
@@ -19,25 +19,32 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Fetch latest BITS ipks
+      - name: Fetch latest BITS packages (ipk + apk)
         run: |
           mkdir -p feed
-          gh release download --repo Banten-IT-Solutions/BITS-Networks-Bot \
-            --pattern '*.ipk' --dir feed --clobber
-          gh release download --repo Banten-IT-Solutions/BITS-Tailscale \
-            --pattern '*.ipk' --dir feed --clobber
-          gh release download --repo Banten-IT-Solutions/BITS-Theme \
-            --pattern '*.ipk' --dir feed --clobber
+          for repo in BITS-Networks-Bot BITS-Tailscale BITS-Theme; do
+            gh release download --repo "Banten-IT-Solutions/$repo" --pattern '*.ipk' --dir feed --clobber || true
+            gh release download --repo "Banten-IT-Solutions/$repo" --pattern '*.apk' --dir feed --clobber || true
+          done
           ls -la feed/
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Build Packages index
+      - name: Build opkg index
         run: |
           chmod +x mkindex.sh
           ./mkindex.sh feed
 
-      - name: Sign Packages (usign/signify-compatible)
+      - name: Build apk index
+        run: |
+          APK_VER="3.0.8-r0"
+          curl -sL -o /tmp/apk-tools-static.apk \
+            "https://dl-cdn.alpinelinux.org/alpine/latest-stable/main/x86_64/apk-tools-static-${APK_VER}.apk"
+          tar xzf /tmp/apk-tools-static.apk -C /tmp sbin/apk.static 2>/dev/null
+          (cd feed && /tmp/sbin/apk.static mkndx --allow-untrusted --output packages.adb *.apk)
+          ls -la feed/
+
+      - name: Sign opkg Packages (usign/signify-compatible)
         run: |
           sudo apt-get update -qq
           sudo apt-get install -y -qq signify-openbsd
