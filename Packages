@@ -1,5 +1,5 @@
 Package: bitsnetworksbot
-Version: 1.2.3
+Version: 1.2.5
 Depends: libc, python3-light, python3-asyncio, python3-urllib, python3-logging, python3-pip, curl, ca-certificates, speedtest-go
 Section: utils
 Architecture: all
@@ -9,13 +9,13 @@ Description: Telegram management bot for OpenWrt routers (BITS-WRT)
   Monitor and manage your OpenWrt device via Telegram: status, internet
   (Huawei HiLink), momo VPN, Tailscale, clients, schedule (Bandix), Docker,
   firewall, storage, logs, backup, reboot and network tools.
-Filename: bitsnetworksbot_1.2.3_all.ipk
-Size: 23931
-SHA256sum: 583cb85a20621200660f9ca41460e47c6f9340a5a8eb9b5093931ee961e812ca
-MD5Sum: 3f4cf97fc2002ee6159863c575f76ff2
+Filename: bitsnetworksbot_1.2.5_all.ipk
+Size: 23930
+SHA256sum: 961530ba49900e0025dd2a5d8481683b2c2f1fbc5540b86eced66315d7e4aaa1
+MD5Sum: 6e7a9e649e95d185c626bb2ddd99b2a9
 
 Package: luci-app-bitsnetworksbot
-Version: 1.2.3
+Version: 1.2.5
 Depends: bitsnetworksbot, luci-base, rpcd, libc
 Section: luci
 Architecture: all
@@ -24,26 +24,26 @@ License: MIT
 Description: LuCI config page for BITS Networks Bot
   Configure the Telegram management bot (token, allowed users, feature toggles)
   from the LuCI web interface.
-Filename: luci-app-bitsnetworksbot_1.2.3_all.ipk
-Size: 2749
-SHA256sum: cfe25db4932e0d2a2ed45f06c575e2acfaaf09e433c7170e66d45e2ac0680865
-MD5Sum: e705761c6eb7e89ff0ed26d8ecd62d32
+Filename: luci-app-bitsnetworksbot_1.2.5_all.ipk
+Size: 2747
+SHA256sum: 6a4b3022e43b17efa15a6bdd0d23b14fe1f6494cc06e77d5f53490310515ae5a
+MD5Sum: 6457d6115cfd6ed927b7730ee0747672
 
 Package: luci-app-tailscale
-Version: 1.0.7
+Version: 1.0.9
 Depends: libc, luci-base, rpcd, tailscale
 Section: luci
 Architecture: all
 Maintainer: Banten IT Solutions <support@bits.co.id>
 License: MIT
 Description: LuCI support for Tailscale
-Filename: luci-app-tailscale_1.0.7_all.ipk
-Size: 10084
-SHA256sum: b02db3c9042797928a6721f22b246c3c40f77f1acf564936c28b8935de50973c
-MD5Sum: f895bbafb3e29ff8333f31b94a21cd4f
+Filename: luci-app-tailscale_1.0.9_all.ipk
+Size: 10081
+SHA256sum: e4ca9f7cd88fd60a51456d329c2870f4da41f16fafdd097ec0e10e19ada9d706
+MD5Sum: d04a409ad1bdafc5bd8ca1857d06b8b6
 
 Package: luci-theme-bits
-Version: 1.0.3
+Version: 1.0.5
 Depends: luci-base, rpcd, libc
 Section: luci
 Architecture: all
@@ -53,8 +53,8 @@ Description: BITS theme for LuCI (OpenWrt)
   Modern green theme for LuCI plus BITS branding: banner, SSH sysinfo,
   boot service, and UI patches for momo, bandix, dockerman, diskman and
   core LuCI pages.
-Filename: luci-theme-bits_1.0.3_all.ipk
-Size: 96668
-SHA256sum: 78a276d8c025986877a28b939734085287f36528c1c104e2904abb8108230d2a
-MD5Sum: 8bb320b68e6b3790a77a1ea00a254f5a
+Filename: luci-theme-bits_1.0.5_all.ipk
+Size: 96657
+SHA256sum: b0c7f8b38d3fbe0f1aa3fa94f074bffeb22ebbc7c0c5fc4c7cba470d742f5c43
+MD5Sum: 59cd3948850ba9d46a74bc99d1f5a5d8
 
