@@ -42,7 +42,11 @@ jobs:
           curl -sL -o /tmp/apk-tools-static.apk \
             "https://dl-cdn.alpinelinux.org/alpine/latest-stable/main/x86_64/apk-tools-static-${APK_VER}.apk"
           tar xzf /tmp/apk-tools-static.apk -C /tmp sbin/apk.static 2>/dev/null
-          (cd feed && /tmp/sbin/apk.static mkndx --allow-untrusted --output packages.adb *.apk)
+          if [ "$(ls feed/*.apk 2>/dev/null | wc -l)" -gt 0 ]; then
+            (cd feed && /tmp/sbin/apk.static mkndx --allow-untrusted --output packages.adb *.apk)
+          else
+            echo "no apk to index"
+          fi
           ls -la feed/
 
       - name: 🔐 Sign OPKG Packages
