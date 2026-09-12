@@ -31,12 +31,12 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: 🏗️ Build opkg Index
+      - name: 🏗️ Build OPKG Index
         run: |
           chmod +x mkindex.sh
           ./mkindex.sh feed
 
-      - name: 🏗️ Build apk Index
+      - name: 🏗️ Build APK Index
         run: |
           APK_VER="3.0.8-r0"
           curl -sL -o /tmp/apk-tools-static.apk \
@@ -45,7 +45,7 @@ jobs:
           (cd feed && /tmp/sbin/apk.static mkndx --allow-untrusted --output packages.adb *.apk)
           ls -la feed/
 
-      - name: 🔐 Sign opkg Packages
+      - name: 🔐 Sign OPKG Packages
         run: |
           sudo apt-get update -qq
           sudo apt-get install -y -qq signify-openbsd
