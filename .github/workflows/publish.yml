@@ -1,4 +1,4 @@
-name: Publish opkg + apk feed
+name: 📦 Publish Feed
 
 on:
   workflow_dispatch:
@@ -13,13 +13,14 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  build-and-deploy:
+  publish:
+    name: 📦 Publish Feed
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: 🧾 Checkout
         uses: actions/checkout@v4
 
-      - name: Fetch latest BITS packages (ipk + apk)
+      - name: ⬇️ Fetch Packages
         run: |
           mkdir -p feed
           for repo in BITS-Networks-Bot BITS-Tailscale BITS-Theme; do
@@ -30,12 +31,12 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Build opkg index
+      - name: 🏗️ Build opkg Index
         run: |
           chmod +x mkindex.sh
           ./mkindex.sh feed
 
-      - name: Build apk index
+      - name: 🏗️ Build apk Index
         run: |
           APK_VER="3.0.8-r0"
           curl -sL -o /tmp/apk-tools-static.apk \
@@ -44,7 +45,7 @@ jobs:
           (cd feed && /tmp/sbin/apk.static mkndx --allow-untrusted --output packages.adb *.apk)
           ls -la feed/
 
-      - name: Sign opkg Packages (usign/signify-compatible)
+      - name: 🔐 Sign opkg Packages
         run: |
           sudo apt-get update -qq
           sudo apt-get install -y -qq signify-openbsd
@@ -56,10 +57,10 @@ jobs:
         env:
           FEED_SIGN_BLOB: ${{ secrets.FEED_SIGN_BLOB }}
 
-      - name: Add landing page
+      - name: 🖼️ Landing Page
         run: cp landing/index.html feed/index.html
 
-      - name: Deploy to GitHub Pages
+      - name: 🚀 Deploy
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
