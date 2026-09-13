@@ -23,7 +23,7 @@ jobs:
       - name: ⬇️ Fetch Packages
         run: |
           mkdir -p feed
-          for repo in BITS-Networks-Bot BITS-Tailscale BITS-Theme; do
+          for repo in BITS-Networks-Bot BITS-Tailscale BITS-Theme BITS-FileManager; do
             gh release download --repo "Banten-IT-Solutions/$repo" --pattern '*.ipk' --dir feed --clobber || true
             gh release download --repo "Banten-IT-Solutions/$repo" --pattern '*.apk' --dir feed --clobber || true
           done
