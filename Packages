@@ -15,8 +15,8 @@ SHA256sum: f10276aad928c6825fb4ccf9d9f547b6cf474593b6dfdd426da5d0bc0b10f4d7
 MD5Sum: b1bef80f2cf7e0b07afb187fcd4bc35b
 
 Package: bitsxl
-Version: 1.2.1
-Depends: libc, python3-light, python3-urllib, python3-json, python3-hashlib, python3-ssl, python3-pip, ca-certificates
+Version: 1.2.2
+Depends: libc, python3-light, python3-urllib, python3-pip, ca-certificates
 Section: utils
 Architecture: all
 Maintainer: Banten IT Solutions <support@bits.co.id>
@@ -25,10 +25,10 @@ Description: BITS XL (myXL) CLI backend
   Account, quota, store, checkout, notifications, and transaction status
   for XL (myXL) — implemented in Python 3, with AES handled by pycryptodome
   (installed best-effort via pip in postinst).
-Filename: bitsxl_1.2.1_all.ipk
-Size: 25074
-SHA256sum: 0aa13fdaf8a82959b233f47b50204192b7ed83d0d61203eb7d823cc62c774933
-MD5Sum: 0258ca348c4779a7037569d7210913de
+Filename: bitsxl_1.2.2_all.ipk
+Size: 25064
+SHA256sum: 60c481206fac2b704d97eccef98b13da562a74c8e89016080c404d3f9f1ad562
+MD5Sum: 7f12bc73ed9ffa4be5f329132f35e76b
 
 Package: luci-app-bitsfilemanager
 Version: 1.5.0
@@ -87,17 +87,17 @@ SHA256sum: a5fa47de9d5ff7b3fc3088320fe9b8ce66bdf0d69b1379fd91ba63c51c33765a
 MD5Sum: b224fbca4047849dc4b63a8e5e6b320b
 
 Package: luci-app-bitsxl
-Version: 1.2.1
+Version: 1.2.2
 Depends: libc, luci-base, rpcd, bitsxl
 Section: luci
 Architecture: all
 Maintainer: Banten IT Solutions <support@bits.co.id>
 License: MIT
 Description: LuCI support for BITS XL
-Filename: luci-app-bitsxl_1.2.1_all.ipk
-Size: 42565
-SHA256sum: b373eb64d4a5e09d5d8edd13d4e510ba672d8b99808a9691fd6aa6530413ee7d
-MD5Sum: 0e7a9d44481664c2a22601ecd11bbbab
+Filename: luci-app-bitsxl_1.2.2_all.ipk
+Size: 42575
+SHA256sum: 7679b385159418b1478689fe64c3f8c67a028ac89125c9dc40e624018a3c8b80
+MD5Sum: e069c9d6114294d40bea8ae0a8af5c5e
 
 Package: luci-theme-bits
 Version: 1.1.0
