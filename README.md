@@ -33,13 +33,13 @@
 
 | Package                   | Source repo                                                     | Fungsi                       |
 | ------------------------- | --------------------------------------------------------------- | ---------------------------- |
-| `bitsnetworksbot`         | [BITS-Networks-Bot](https://github.com/Banten-IT-Solutions/BITS-Networks-Bot) | Telegram bot (daemon)        |
-| `luci-app-bitsnetworksbot`| [BITS-Networks-Bot](https://github.com/Banten-IT-Solutions/BITS-Networks-Bot) | LuCI config page             |
-| `luci-app-bitstailscale`  | [BITS-Tailscale](https://github.com/Banten-IT-Solutions/BITS-Tailscale) | LuCI app for Tailscale       |
-| `luci-app-bitsfilemanager`| [BITS-FileManager](https://github.com/Banten-IT-Solutions/BITS-FileManager) | Native file manager for LuCI (no PHP, no Go) |
+| `bitsnetworksbot`         | [BITS-Networks-Bot](https://github.com/Banten-IT-Solutions/BITS-Networks-Bot) | Telegram management bot for OpenWrt routers (BITS-WRT) |
+| `luci-app-bitsnetworksbot`| [BITS-Networks-Bot](https://github.com/Banten-IT-Solutions/BITS-Networks-Bot) | LuCI config page for BITS Networks Bot |
+| `luci-app-bitstailscale`  | [BITS-Tailscale](https://github.com/Banten-IT-Solutions/BITS-Tailscale) | LuCI support for Tailscale |
+| `luci-app-bitsfilemanager`| [BITS-FileManager](https://github.com/Banten-IT-Solutions/BITS-FileManager) | BITS File Manager |
 | `luci-theme-bits`         | [BITS-Theme](https://github.com/Banten-IT-Solutions/BITS-Theme) | BITS theme for LuCI (OpenWrt) |
-| `luci-app-bitshilink`     | [BITS-HiLink](https://github.com/Banten-IT-Solutions/BITS-HiLink) | LuCI app for Huawei HiLink modem |
-| `luci-app-bitsxl`         | [BITS-XL](https://github.com/Banten-IT-Solutions/BITS-XL)       | LuCI app for XL (myXL)       |
+| `luci-app-bitshilink`     | [BITS-HiLink](https://github.com/Banten-IT-Solutions/BITS-HiLink) | LuCI support for BITS HiLink modem |
+| `luci-app-bitsxl`         | [BITS-XL](https://github.com/Banten-IT-Solutions/BITS-XL)       | LuCI support for BITS XL |
 
 ## 🛠️ Tech Stack
 
