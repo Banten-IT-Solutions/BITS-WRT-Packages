@@ -31,19 +31,19 @@ SHA256sum: 62de6939603ce4f16857cc4fef9ed2e90808a232669380ea9b1318011e3ea3b6
 MD5Sum: 43421b271af9995e5c3a10ca6f431328
 
 Package: luci-app-bitsfilemanager
-Version: 1.5.0
+Version: 1.5.1
 Depends: luci-base, rpcd, rpcd-mod-file, cgi-io, libc
 Section: luci
 Architecture: all
 Maintainer: Banten IT Solutions <support@bits.co.id>
-License: Apache-2.0
+License: MIT
 Description: BITS File Manager
   Native file manager for LuCI (no PHP, no Go). Browse, upload, download,
   edit, rename, move, search and delete files on the router.
-Filename: luci-app-bitsfilemanager_1.5.0_all.ipk
-Size: 15341
-SHA256sum: e46fb40749f6a7a38b8a9403be74bfc09da3816bc55e82010c9d0a2193256c32
-MD5Sum: d38e0d6aaab756e3ddbbae4a8ba887d7
+Filename: luci-app-bitsfilemanager_1.5.1_all.ipk
+Size: 15326
+SHA256sum: ba045e12a43ab4a67d0a14949327e8c1ef817bc937414bbd5292278774259cee
+MD5Sum: a211aa9acc214f07e28773c61c1f14eb
 
 Package: luci-app-bitshilink
 Version: 1.2.0
@@ -74,17 +74,17 @@ SHA256sum: e77c2e6f9f13a92c538d17b29abcec8f5eafe88740d5a4c0f9e9365de4968147
 MD5Sum: 0fcf985d3aaaf8fe972060a989ba1150
 
 Package: luci-app-bitstailscale
-Version: 1.2.2
+Version: 1.2.3
 Depends: libc, luci-base, rpcd, tailscale
 Section: luci
 Architecture: all
 Maintainer: Banten IT Solutions <support@bits.co.id>
 License: MIT
 Description: LuCI support for Tailscale
-Filename: luci-app-bitstailscale_1.2.2_all.ipk
-Size: 10099
-SHA256sum: a5fa47de9d5ff7b3fc3088320fe9b8ce66bdf0d69b1379fd91ba63c51c33765a
-MD5Sum: b224fbca4047849dc4b63a8e5e6b320b
+Filename: luci-app-bitstailscale_1.2.3_all.ipk
+Size: 10094
+SHA256sum: 61975343d4e2b4c69125672e0ba58f3648858814aaace4ec9345e0384e55eced
+MD5Sum: 40df84092a0a3553401f7d2984db82d5
 
 Package: luci-app-bitsxl
 Version: 1.2.5
@@ -100,7 +100,7 @@ SHA256sum: 88db90d9f0753e1c214fdfbad8b4fac6ac3b68a38a70a418eb9a3b0be75b9d1f
 MD5Sum: 1a6f0dfea59be29275311a17e4674123
 
 Package: luci-theme-bits
-Version: 1.1.0
+Version: 1.1.1
 Depends: luci-base, rpcd, libc
 Section: luci
 Architecture: all
@@ -110,8 +110,8 @@ Description: BITS theme for LuCI (OpenWrt)
   Modern green theme for LuCI plus BITS branding: banner, SSH sysinfo,
   boot service, and UI patches for momo, bandix, dockerman, diskman and
   core LuCI pages.
-Filename: luci-theme-bits_1.1.0_all.ipk
-Size: 96669
-SHA256sum: df7b85a3793c178a18ef3320b355c80da906a12e95cc53fec3d191f3d2f6454b
-MD5Sum: 6bdcfe0777e3a753c712d538c8f087f4
+Filename: luci-theme-bits_1.1.1_all.ipk
+Size: 96659
+SHA256sum: 28be717885f4d627509c14726f37ee00c23093801fffb77fde8f6ed5e3b085c2
+MD5Sum: 7ee8c11c7b2965ee1786c4ecfb790292
 
