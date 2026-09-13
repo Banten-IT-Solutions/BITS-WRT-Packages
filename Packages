@@ -15,7 +15,7 @@ SHA256sum: f10276aad928c6825fb4ccf9d9f547b6cf474593b6dfdd426da5d0bc0b10f4d7
 MD5Sum: b1bef80f2cf7e0b07afb187fcd4bc35b
 
 Package: luci-app-bitsfilemanager
-Version: 1.1.5
+Version: 1.1.6
 Depends: luci-base, rpcd, rpcd-mod-file, cgi-io, libc
 Section: luci
 Architecture: all
@@ -24,10 +24,10 @@ License: Apache-2.0
 Description: BITS File Manager
   Native file manager for LuCI (no PHP, no Go). Browse, upload, download,
   edit, rename, move, search and delete files on the router.
-Filename: luci-app-bitsfilemanager_1.1.5_all.ipk
-Size: 14119
-SHA256sum: 48aaaad8844ef94558d136ff4cf8a6f10138fd6728816df0012bca415d541b42
-MD5Sum: 8dbb1309212c92973b32d4583f12df0f
+Filename: luci-app-bitsfilemanager_1.1.6_all.ipk
+Size: 14196
+SHA256sum: 901baf5f2e47b385b9534048f2ec904eb173f83aac1c9e0655e9fc0af68476fb
+MD5Sum: 6c9a7f28c3d77e7da20b4621603d3077
 
 Package: luci-app-bitshilink
 Version: 1.0.1
@@ -69,6 +69,19 @@ Filename: luci-app-bitstailscale_1.2.2_all.ipk
 Size: 10099
 SHA256sum: a5fa47de9d5ff7b3fc3088320fe9b8ce66bdf0d69b1379fd91ba63c51c33765a
 MD5Sum: b224fbca4047849dc4b63a8e5e6b320b
+
+Package: luci-app-bitsxl
+Version: 1.0.0
+Depends: libc, luci-base, rpcd, bitsxl
+Section: luci
+Architecture: all
+Maintainer: Banten IT Solutions <support@bits.co.id>
+License: MIT
+Description: LuCI support for BITS XL
+Filename: luci-app-bitsxl_1.0.0_all.ipk
+Size: 43186
+SHA256sum: d5fac50f65bcf31714c73413f0a999733eba668e94cf5aa95f9217b6e4fd0278
+MD5Sum: b419e7bfe5c4a2f0260f042b6bb24e3f
 
 Package: luci-theme-bits
 Version: 1.1.0
