@@ -24,7 +24,7 @@
 
 | Feature              | Description                                                                                      |
 | -------------------- | ------------------------------------------------------------------------------------------------ |
-| **Always latest**    | Workflow harian + manual mengunduh `.ipk` terbaru dari ketiga repo source.                       |
+| **Always latest**    | Workflow harian + manual mengunduh `.ipk` terbaru dari tiap repo source.                       |
 | **Signed (usign)**   | `Packages` ditandatangani; opkg verifikasi via `option check_signature`.                         |
 | **SDK-less index**   | `mkindex.sh` baca `control.tar.gz` langsung — tak butuh OpenWrt SDK.                             |
 | **Landing page**     | Halaman web statis di GitHub Pages + file feed (.ipk, `Packages`).                              |
@@ -37,6 +37,8 @@
 | `luci-app-bitsnetworksbot`| [BITS-Networks-Bot](https://github.com/Banten-IT-Solutions/BITS-Networks-Bot) | LuCI config page             |
 | `luci-app-tailscale`      | [BITS-Tailscale](https://github.com/Banten-IT-Solutions/BITS-Tailscale) | LuCI app for Tailscale       |
 | `luci-theme-bits`         | [BITS-Theme](https://github.com/Banten-IT-Solutions/BITS-Theme) | BITS green theme + branding  |
+| `luci-app-bitshilink`     | [BITS-HiLink](https://github.com/Banten-IT-Solutions/BITS-HiLink) | LuCI app for Huawei HiLink modem |
+| `luci-app-bitsxl`         | [BITS-XL](https://github.com/Banten-IT-Solutions/BITS-XL)       | LuCI app for XL (myXL)       |
 
 ## 🛠️ Tech Stack
 
@@ -68,7 +70,7 @@ chmod 644 /etc/opkg/keys/6d859947af7c14f1
 ```sh
 echo "src/gz bits https://banten-it-solutions.github.io/BITS-WRT-Packages" > /etc/opkg/customfeeds.conf
 opkg update
-opkg install bitsnetworksbot luci-app-bitsnetworksbot luci-app-tailscale luci-theme-bits
+opkg install bitsnetworksbot luci-app-bitsnetworksbot luci-app-tailscale luci-theme-bits luci-app-bitshilink luci-app-bitsxl
 ```
 
 `opkg update` wajib cetak `Signature check passed` untuk feed `bits`.
