@@ -1,3 +1,20 @@
+Package: bandix
+Version: 0.12.10-r1
+Depends: libc, zoneinfo-all, conntrack, iw
+Source: /feed/openwrt-bandix
+SourceName: bandix
+License: Apache-2.0
+Section: net
+SourceDateEpoch: 1788704508
+Maintainer: timsaya
+Architecture: aarch64_generic
+Installed-Size: 4853760
+Description:  Bandix core service for network traffic monitoring
+Filename: bandix_0.12.10-r1_aarch64_generic.ipk
+Size: 2375596
+SHA256sum: 3db3bdb73cd0e52bbb5681fd297016154aadab3c833803e363c72b7ed89b279e
+MD5Sum: 4dcf95672e5b43a5a2635f282a47ef9b
+
 Package: bitsnetworksbot
 Version: 1.3.1
 Depends: libc, python3-light, python3-asyncio, python3-urllib, python3-logging, python3-pip, curl, ca-certificates, speedtest-go
@@ -29,6 +46,24 @@ Filename: bitsxl_1.2.6_all.ipk
 Size: 25064
 SHA256sum: 6709ad30cff1717f9ed77d88fa17abd3e0132025d9752287d1119aa0f0fcdb72
 MD5Sum: fc86b45c0ad0af1221c11dda5c2212c5
+
+Package: luci-app-bandix
+Version: 0.12.11-r1
+Depends: libc, luci-base, luci-lib-jsonc, curl, bandix
+Source: /feed/luci-app-bandix
+SourceName: luci-app-bandix
+License: Apache-2.0
+Section: luci
+SourceDateEpoch: 1788703871
+URL: https://github.com/openwrt/luci
+Maintainer: OpenWrt LuCI community
+Architecture: all
+Installed-Size: 419840
+Description:  LuCI Bandix app for network traffic monitoring
+Filename: luci-app-bandix_0.12.11-r1_all.ipk
+Size: 73378
+SHA256sum: cd938bd741948d68507ea19d68a2708af827daadeb9074817afe84da16c18f70
+MD5Sum: 0e8086a85b7615060ba484bb4d2a4e76
 
 Package: luci-app-bitsfilemanager
 Version: 1.5.1
