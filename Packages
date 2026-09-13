@@ -71,17 +71,17 @@ SHA256sum: a5fa47de9d5ff7b3fc3088320fe9b8ce66bdf0d69b1379fd91ba63c51c33765a
 MD5Sum: b224fbca4047849dc4b63a8e5e6b320b
 
 Package: luci-app-bitsxl
-Version: 1.0.0
+Version: 1.1.1
 Depends: libc, luci-base, rpcd, bitsxl
 Section: luci
 Architecture: all
 Maintainer: Banten IT Solutions <support@bits.co.id>
 License: MIT
 Description: LuCI support for BITS XL
-Filename: luci-app-bitsxl_1.0.0_all.ipk
-Size: 43186
-SHA256sum: d5fac50f65bcf31714c73413f0a999733eba668e94cf5aa95f9217b6e4fd0278
-MD5Sum: b419e7bfe5c4a2f0260f042b6bb24e3f
+Filename: luci-app-bitsxl_1.1.1_all.ipk
+Size: 42598
+SHA256sum: 2e86270a3a5f26f5efb98c4ba519496b8c714bd54ae1246aeaae534f155ee651
+MD5Sum: 32b582ce467e230d2c4c8a30e39cc1db
 
 Package: luci-theme-bits
 Version: 1.1.0
