@@ -14,21 +14,6 @@ Size: 23930
 SHA256sum: 961530ba49900e0025dd2a5d8481683b2c2f1fbc5540b86eced66315d7e4aaa1
 MD5Sum: 6e7a9e649e95d185c626bb2ddd99b2a9
 
-Package: luci-app-bitsfilemanager
-Version: 1.0.0
-Depends: luci-base, rpcd, rpcd-mod-file, cgi-io, libc
-Section: luci
-Architecture: all
-Maintainer: Banten IT Solutions <support@bits.co.id>
-License: Apache-2.0
-Description: BITS File Manager
-  Native file manager for LuCI (no PHP, no Go). Browse, upload, download,
-  edit, rename, move, search and delete files on the router.
-Filename: luci-app-bitsfilemanager_1.0.0_all.ipk
-Size: 12728
-SHA256sum: 2d5a5b4494f8d10520cbb1196136fa5bd743fee31288fa60047ea2bd94451ce3
-MD5Sum: 296c2b7759afa2e81ebbd45aeed8bcc1
-
 Package: luci-app-bitsnetworksbot
 Version: 1.2.5
 Depends: bitsnetworksbot, luci-base, rpcd, libc
@@ -44,18 +29,18 @@ Size: 2747
 SHA256sum: 6a4b3022e43b17efa15a6bdd0d23b14fe1f6494cc06e77d5f53490310515ae5a
 MD5Sum: 6457d6115cfd6ed927b7730ee0747672
 
-Package: luci-app-tailscale
-Version: 1.0.9
+Package: luci-app-bitstailscale
+Version: 1.2.0
 Depends: libc, luci-base, rpcd, tailscale
 Section: luci
 Architecture: all
 Maintainer: Banten IT Solutions <support@bits.co.id>
 License: MIT
 Description: LuCI support for Tailscale
-Filename: luci-app-tailscale_1.0.9_all.ipk
-Size: 10081
-SHA256sum: e4ca9f7cd88fd60a51456d329c2870f4da41f16fafdd097ec0e10e19ada9d706
-MD5Sum: d04a409ad1bdafc5bd8ca1857d06b8b6
+Filename: luci-app-bitstailscale_1.2.0_all.ipk
+Size: 10093
+SHA256sum: da630f7ff3bb0815a0a93faf1335864dc814f3f1647e68fd766bef72be35fc7a
+MD5Sum: 17479be9875e75c5705e282f13d71d5f
 
 Package: luci-theme-bits
 Version: 1.0.5
