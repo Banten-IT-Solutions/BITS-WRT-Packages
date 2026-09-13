@@ -15,7 +15,7 @@ SHA256sum: f10276aad928c6825fb4ccf9d9f547b6cf474593b6dfdd426da5d0bc0b10f4d7
 MD5Sum: b1bef80f2cf7e0b07afb187fcd4bc35b
 
 Package: luci-app-bitsfilemanager
-Version: 1.2.2
+Version: 1.2.3
 Depends: luci-base, rpcd, rpcd-mod-file, cgi-io, libc
 Section: luci
 Architecture: all
@@ -24,10 +24,10 @@ License: Apache-2.0
 Description: BITS File Manager
   Native file manager for LuCI (no PHP, no Go). Browse, upload, download,
   edit, rename, move, search and delete files on the router.
-Filename: luci-app-bitsfilemanager_1.2.2_all.ipk
-Size: 15172
-SHA256sum: 7ece4dcd24cccdc7fb355463abdf32f7656f6f19508ba6484598b51fe8bec214
-MD5Sum: b5f795e41b05a877ea30aea1b715f680
+Filename: luci-app-bitsfilemanager_1.2.3_all.ipk
+Size: 15248
+SHA256sum: 02d26c66696b898d31c5122018c0bcb9d8aa9c0a35d4abaa88de152f8c1511c5
+MD5Sum: 683f39f524e4c64fd07d76c51b3e4704
 
 Package: luci-app-bitshilink
 Version: 1.1.0
