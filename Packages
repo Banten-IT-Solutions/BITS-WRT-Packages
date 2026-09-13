@@ -74,17 +74,17 @@ SHA256sum: 89350c9a7175f12359870601b0e0ad7bc5c2b13143945cf63a655409f79e4dc5
 MD5Sum: 73be55d2bb5f09188548266704cff8c7
 
 Package: luci-app-bitstailscale
-Version: 1.2.3
+Version: 1.2.4
 Depends: libc, luci-base, rpcd, tailscale
 Section: luci
 Architecture: all
 Maintainer: Banten IT Solutions <support@bits.co.id>
 License: MIT
 Description: LuCI support for Tailscale
-Filename: luci-app-bitstailscale_1.2.3_all.ipk
-Size: 10094
-SHA256sum: 61975343d4e2b4c69125672e0ba58f3648858814aaace4ec9345e0384e55eced
-MD5Sum: 40df84092a0a3553401f7d2984db82d5
+Filename: luci-app-bitstailscale_1.2.4_all.ipk
+Size: 10090
+SHA256sum: b6350ca27539e2c476ed188434c0c908d76a975665e643c4d3ef8957c7386a4e
+MD5Sum: a29957c41b74a5a3aa4aa19c647aecfc
 
 Package: luci-app-bitsxl
 Version: 1.2.6
