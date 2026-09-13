@@ -30,17 +30,17 @@ SHA256sum: 901baf5f2e47b385b9534048f2ec904eb173f83aac1c9e0655e9fc0af68476fb
 MD5Sum: 6c9a7f28c3d77e7da20b4621603d3077
 
 Package: luci-app-bitshilink
-Version: 1.0.1
+Version: 1.0.2
 Depends: libc, luci-base, rpcd
 Section: luci
 Architecture: all
 Maintainer: Banten IT Solutions <support@bits.co.id>
 License: MIT
 Description: LuCI support for BITS HiLink modem
-Filename: luci-app-bitshilink_1.0.1_all.ipk
-Size: 1508861
-SHA256sum: 0d12e46615d767c66c7532a69ddd2fd76e3d641b6507530e77a62a6a43f121ea
-MD5Sum: 3cf3aafb7f46764277b284462a2780cf
+Filename: luci-app-bitshilink_1.0.2_all.ipk
+Size: 1508761
+SHA256sum: 4080f490d113476d251d62a22f1ded9e2774b81c22f9a1b6af962259fe3de766
+MD5Sum: 97e4e4b21812e16e9cb75d2d4067f30c
 
 Package: luci-app-bitsnetworksbot
 Version: 1.3.0
