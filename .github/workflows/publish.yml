@@ -27,6 +27,14 @@ jobs:
             gh release download --repo "Banten-IT-Solutions/$repo" --pattern '*.ipk' --dir feed --clobber || true
             gh release download --repo "Banten-IT-Solutions/$repo" --pattern '*.apk' --dir feed --clobber || true
           done
+          # External: Bandix (aarch64_generic binary) + luci-app-bandix (noarch)
+          gh release download --repo "timsaya/openwrt-bandix" --pattern '*aarch64_generic.ipk' --dir feed --clobber || true
+          gh release download --repo "timsaya/openwrt-bandix" --pattern '*aarch64_generic.apk' --dir feed --clobber || true
+          gh release download --repo "timsaya/luci-app-bandix" --pattern 'luci-app-bandix*_all.ipk' --dir feed --clobber || true
+          gh release download --repo "timsaya/luci-app-bandix" --pattern 'luci-app-bandix*_all.apk' --dir feed --clobber || true
+          # flatten apk filename (apk pkgname_spec = ${name}-${version}.apk, no arch)
+          for f in feed/*_aarch64_generic.apk; do [ -f "$f" ] && mv "$f" "${f%_aarch64_generic.apk}.apk"; done
+          for f in feed/*_all.apk; do [ -f "$f" ] && mv "$f" "${f%_all.apk}.apk"; done
           ls -la feed/
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
